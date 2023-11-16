@@ -32,7 +32,7 @@ void rdFile(FILE *fd)
 
 	for (line_no = 1; getline(&buffer, &length, fd) != -1; line_no++)
 	{
-		format = parseine(buffer, line_no, format);
+		format = parsline(buffer, line_no, format);
 	}
 	free(buffer);
 }
